@@ -8,9 +8,8 @@ import java.util.Date;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
-import org.mongodb.morphia.annotations.Reference;
 
-@Entity("localization")
+@Entity("localization2")
 public class Localization {
 
 	@Id
@@ -32,7 +31,7 @@ public class Localization {
 	public Driver driver = new Driver();
 
 
-	@Reference
+	/*@Reference*/
 	public Vehicle vechile;
 
 

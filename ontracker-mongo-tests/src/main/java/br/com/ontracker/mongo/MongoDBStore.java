@@ -8,6 +8,8 @@ import org.mongodb.morphia.query.Query;
 
 import com.mongodb.MongoClient;
 
+import br.com.ontracker.domain.Localization;
+
 public class MongoDBStore {
 
 
@@ -31,6 +33,18 @@ public class MongoDBStore {
 		datastore.save(object);
 	}
 
+
+
+
+
+
+	public List<Localization> test(long id){
+		return datastore.createQuery(Localization.class)
+				.disableValidation()
+				.filter("vechile.id =", "56a278176f7f94242834652b")
+				.asList();
+		/*return null;*/
+	}
 
 
 

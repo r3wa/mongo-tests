@@ -42,6 +42,11 @@ public class MongoDBStore {
 
 
 
+	public <T> T find(Class<T> c, long id) {
+		return (T) datastore.find(c, "mysqlID", id);
+	}
+
+
 
 
 
@@ -74,6 +79,11 @@ public class MongoDBStore {
 	private static MongoClient mongoClient() {
 		return new MongoClient("localhost");
 	}
+
+
+
+
+
 
 
 

@@ -1,8 +1,6 @@
 package br.com.ontracker.main;
 
-import static java.lang.System.currentTimeMillis;
-
-import br.com.ontracker.mongo.MongoDBStore;
+import br.com.ontracker.process.Processor;
 
 public class Main {
 
@@ -10,11 +8,11 @@ public class Main {
 
 
 	public static void main(String[] args) throws Exception{
-	//	new Processor().process();
+		new Processor().process();
 
 
-		/*Vehicle vehicle = new MongoDBStore().find(Vehicle.class, 54);
-		System.out.println(vehicle);*/
+/*		Vehicle vehicle = new MongoDBStore().find(Vehicle.class, 54);
+		System.out.println(vehicle);
 
 		long start = currentTimeMillis();
 
@@ -22,7 +20,7 @@ public class Main {
 
 
 		System.out.println("Total time -> " + ( ( currentTimeMillis() - start ) / 1000 ) + " seconds");
-
+*/
 
 	}
 

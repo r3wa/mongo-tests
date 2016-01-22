@@ -41,7 +41,7 @@ public class MongoDBStore {
 	public List<Localization> test(long id){
 		return datastore.createQuery(Localization.class)
 				.disableValidation()
-				.filter("vechile.id =", "56a278176f7f94242834652b")
+				.filter("vechile.mysqlID =", id)
 				.asList();
 		/*return null;*/
 	}
@@ -93,6 +93,7 @@ public class MongoDBStore {
 
 
 	private static MongoClient mongoClient() {
+		/*return new MongoClient("52.26.206.62");*/
 		return new MongoClient("localhost");
 	}
 

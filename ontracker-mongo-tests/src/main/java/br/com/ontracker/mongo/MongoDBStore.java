@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
+import org.mongodb.morphia.query.Query;
 
 import com.mongodb.MongoClient;
 
@@ -43,7 +44,8 @@ public class MongoDBStore {
 
 
 	public <T> T find(Class<T> c, long id) {
-		return (T) datastore.find(c, "mysqlID", id);
+		Query<T> query = datastore.createQuery(c).field("mysqlID").equal(id);
+		return query.get();
 	}
 
 
@@ -77,7 +79,7 @@ public class MongoDBStore {
 
 
 	private static MongoClient mongoClient() {
-		return new MongoClient("localhost");
+		return new MongoClient("52.26.206.62");
 	}
 
 

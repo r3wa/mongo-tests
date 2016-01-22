@@ -81,7 +81,7 @@ public class Processor {
 
 			MySQLStore mySQLStore = new MySQLStore();
 
-			System.out.println("Creating the localizations to vehicle ->  " + id  +  " in thread -> " + Thread.currentThread().getName());
+			System.out.println("Starting create the localizations to vehicle ->  " + id  +  " in thread -> " + Thread.currentThread().getName());
 
 			List<Localization> localizations = mySQLStore.Locacations(id);
 
@@ -91,6 +91,9 @@ public class Processor {
 				localization.vechile = mongoStore.find(Vehicle.class, id);
 				mongoStore.save(localization);
 			});
+
+			System.out.println("Finished create the localizations to vehicle ->  " + id  +  " in thread -> " + Thread.currentThread().getName());
+
 
 			return null;
 		};

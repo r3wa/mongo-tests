@@ -93,7 +93,7 @@ public class MongoDBStore {
 
 
 	private static MongoClient mongoClient() {
-		/*return new MongoClient("52.26.206.62");*/
+		//return new MongoClient("52.26.206.62");
 		return new MongoClient("localhost");
 	}
 

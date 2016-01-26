@@ -9,7 +9,7 @@ import java.util.concurrent.ForkJoinPool;
 
 import br.com.ontracker.domain.Localization;
 import br.com.ontracker.domain.Vehicle;
-import br.com.ontracker.mongo.MongoDBStore;
+import br.com.ontracker.mongo.MongoMorphiaStore;
 import br.com.ontracker.mysql.MySQLStore;
 
 
@@ -26,7 +26,7 @@ public class Processor {
 		List<Callable<String>> tasks = new ArrayList<>();
 
 
-		MongoDBStore mongoStore = new MongoDBStore();
+		MongoMorphiaStore mongoStore = new MongoMorphiaStore();
 
 
 		mongoStore.find(Vehicle.class)
@@ -76,7 +76,7 @@ public class Processor {
 
 		return () -> {
 
-			MongoDBStore mongoStore = new MongoDBStore();
+			MongoMorphiaStore mongoStore = new MongoMorphiaStore();
 
 
 			MySQLStore mySQLStore = new MySQLStore();

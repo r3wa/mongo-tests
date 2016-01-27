@@ -54,7 +54,7 @@ public class MongoMorphiaStore {
 		.field("vechile.mysqlID")
 		.in(ids);
 
-		System.out.println(query);
+//		System.out.println(query);
 
 		return query.asList();
 	}
@@ -108,8 +108,8 @@ public class MongoMorphiaStore {
 
 
 	private static MongoClient mongoClient() {
-		//return new MongoClient("52.89.216.96");
-		return new MongoClient("localhost");
+		return new MongoClient("52.89.216.96");
+		//return new MongoClient("localhost");
 	}
 
 

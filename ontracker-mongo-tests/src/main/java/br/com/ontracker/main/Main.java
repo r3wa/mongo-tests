@@ -20,11 +20,12 @@ public class Main {
 
 
 
-
 		MongoMorphiaStore mongoMorphia = new MongoMorphiaStore();
 
 		long start = currentTimeMillis();
 
+
+		System.out.println("----------------------------------------------------------------------------------------------");
 
 		System.out.println("Number of documents -> " + mongoMorphia.localizations(ids(args)).size() + " to vehicle -> " + asList(args));
 

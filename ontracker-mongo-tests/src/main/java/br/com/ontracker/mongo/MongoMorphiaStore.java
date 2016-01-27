@@ -40,9 +40,23 @@ public class MongoMorphiaStore {
 
 	public List<Localization> localizations(long id){
 		return datastore.createQuery(Localization.class)
-				.disableValidation()
+				//.disableValidation()
 				.filter("vechile.mysqlID =", id)
 				.asList();
+	}
+
+
+
+	public List<Localization> localizations(List<Long> ids){
+
+		Query<Localization> query = datastore.createQuery(Localization.class)
+		//.disableValidation()
+		.field("vechile.mysqlID")
+		.in(ids);
+
+		System.out.println(query);
+
+		return query.asList();
 	}
 
 

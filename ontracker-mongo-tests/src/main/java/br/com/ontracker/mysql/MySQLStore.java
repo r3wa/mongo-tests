@@ -52,7 +52,7 @@ public class MySQLStore {
 
 
 
-	public List<Localization> Locacations(long id) throws Exception {
+	public List<Localization> localizations(long id) throws Exception {
 		return queryRunner.query(
 				connection,
 				query(id),

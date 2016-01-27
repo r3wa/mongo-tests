@@ -83,7 +83,7 @@ public class Processor {
 
 			System.out.println("Starting create the localizations to vehicle ->  " + id  +  " in thread -> " + Thread.currentThread().getName());
 
-			List<Localization> localizations = mySQLStore.Locacations(id);
+			List<Localization> localizations = mySQLStore.localizations(id);
 
 			System.out.println("Number of localizations for this vehicle is -> " + localizations.size());
 

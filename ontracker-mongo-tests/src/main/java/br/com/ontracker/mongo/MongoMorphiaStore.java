@@ -94,7 +94,7 @@ public class MongoMorphiaStore {
 
 
 	private static MongoClient mongoClient() {
-		//return new MongoClient("54.207.116.140");
+		//return new MongoClient("52.89.216.96");
 		return new MongoClient("localhost");
 	}
 

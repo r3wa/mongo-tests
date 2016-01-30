@@ -132,6 +132,7 @@ public class MySQLStore {
 
 
 
+
 			while (rs.next()) {
 		    	  try {
 		    		  Localization l = create(rs);

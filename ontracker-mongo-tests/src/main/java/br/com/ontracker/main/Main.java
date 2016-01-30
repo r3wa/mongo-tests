@@ -7,7 +7,7 @@ import static org.apache.commons.lang3.math.NumberUtils.toLong;
 
 import java.util.List;
 
-import br.com.ontracker.mongo.MongoMorphiaStore;
+import br.com.ontracker.mysql.MySQLStore;
 
 public class Main {
 
@@ -20,17 +20,17 @@ public class Main {
 
 
 
-		MongoMorphiaStore mongoMorphia = new MongoMorphiaStore();
+//		MongoMorphiaStore mongoMorphia = new MongoMorphiaStore();
 
-//		MySQLStore mySQLStore = new MySQLStore();
+		MySQLStore mySQLStore = new MySQLStore();
 
 		long start = currentTimeMillis();
 
 		System.out.println("----------------------------------------------------------------------------------------------");
 
-		System.out.println("Number of documents -> " + mongoMorphia.localizations(ids(args)).size() + " to vehicle -> " + asList(args));
+//		System.out.println("Number of documents -> " + mongoMorphia.localizations(ids(args)).size() + " to vehicle -> " + asList(args));
 
-		//System.out.println("Number of documents -> " + mySQLStore.localizations(toLong(args[0])).size() + " to vehicle -> " + asList(args));
+		System.out.println("Number of documents -> " + mySQLStore.localizations(toLong(args[0])).size() + " to vehicle -> " + asList(args));
 
 		System.out.println("Total time -> " + ( ( currentTimeMillis() - start ) / 1000 ) + " seconds");
 

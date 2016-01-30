@@ -430,8 +430,7 @@ public class MySQLStore {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			// Setup the connection with the DB
-			return DriverManager.getConnection("jdbc:mysql://homolog.c6jfzumtfhiy.sa-east-1.rds.amazonaws.com:3306/DB_TRACKER?" + "user=AWSTRACKER&password=ontracker999");
-
+			return DriverManager.getConnection("jdbc:mysql://localhost:3306/ontracker?" + "user=root&password=root");
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;

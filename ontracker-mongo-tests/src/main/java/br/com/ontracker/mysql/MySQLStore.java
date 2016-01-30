@@ -131,9 +131,12 @@ public class MySQLStore {
 			List<Localization> localizations = new ArrayList<>();
 
 
+
 			while (rs.next()) {
 		    	  try {
-		    		  localizations.add(create(rs));
+		    		  Localization l = create(rs);
+		    		  System.out.println(l);
+		    		  localizations.add(l);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
